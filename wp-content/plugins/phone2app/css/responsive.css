@@ -1,0 +1,37 @@
+@media screen and (max-width: 1000px){
+    .form_details{
+        display: none;
+    }
+
+    .phone2app-header div:nth-child(4){
+        display: none;
+    }
+
+    .phone2app-header .details{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .edit, .delete{
+        display: none;
+    }
+
+
+}
+
+
+@media screen and (max-width: 767px){
+    #form_list, .phone2app_modal, .phone2app-header {
+        width: 85%;
+        margin-left: 5%;
+        left: 6%;
+        position: absolute;
+        margin-top: 15%;
+    }
+
+    .phone2app-header {
+        display: none;
+    }
+
+}

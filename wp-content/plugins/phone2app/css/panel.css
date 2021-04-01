@@ -1,0 +1,352 @@
+#phone2app{
+    position: absolute;
+    top: 0;
+    height: calc(100vh - 32px);
+    width: calc(100% + 20px);
+    margin: 0;
+    left: -20px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+#phone2app.login-bg{
+    background: url("./../img/bg.jpg") 50% fixed;
+    background-size: cover;
+}
+
+#phone2app.login-bg::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #242424;
+    opacity: .70;
+    left: 0;
+}
+
+.phone2app_modal{
+    border-radius: 2px 2px 5px 5px;
+    padding: 10px 20px 20px 20px;
+    background: #fff;
+    position: relative;
+    padding-bottom: 80px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    margin-top: 2%;
+    max-width: 1000px;
+    width: 90%;
+}
+
+#form_list{
+    padding-bottom: 20px !important;
+}
+
+.phone2app_modal label{
+    text-align: left;
+    margin: 5px 0;
+}
+
+.phone2app_modal .title {
+    color: #444;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.form_header{
+    margin: 10px 0 20px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.form_header *{
+    width: auto !important;
+    display: inline-block;
+    margin: 10px 0 0 0;
+    height: auto !important;
+}
+
+.form_header .form_button{
+    float: right;
+}
+
+.form{
+    border-bottom: 1px solid #eee;
+    height: 40px;
+    line-height: 40px;
+    display: table;
+    width: 100%;
+}
+
+.form *{
+    display: inline-block;
+    width: auto;
+    margin: 0px !important;
+    padding: 0 !important;
+    border: none !important;
+    white-space: nowrap;
+}
+
+.form .form_title{
+    white-space: pre;
+    word-break: break-word;
+    width: 40%;
+}
+
+.form .form_details{
+    width: auto;
+    float: right;
+    text-align: right;
+    white-space: nowrap !important;
+    line-height: 42px;
+}
+
+.form_buttons{
+    float: right;
+    vertical-align: top;
+    margin-left: 20px !important;
+}
+
+.form_button{
+    margin-left: 15px !important;
+    cursor: pointer !important;
+    font-size: 12px;
+
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.form_button.delete:hover{
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.form_button.delete:hover{
+    color: #F44336;
+}
+
+.form_button.edit:hover, .form_button.back:hover{
+    color: #0096D7;
+}
+.form_button.add:hover{
+    color: #4CAF50;
+}
+
+.phone2app_input {
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px !important;
+    height: 35px !important;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #ccc;
+}
+
+i.fa{
+    margin-top: 0;
+}
+
+#form_add, #form_edit{
+    max-width: 400px;
+}
+
+.form_add_checks{
+    position: relative;
+}
+
+.form_add_check{
+    position: relative;
+    width: 100%;
+    height: 25px;
+    display: inline-block;
+}
+
+.form_add_check *{
+    position: relative;
+    width: auto !important;
+    float: left !important;
+    display: inline-block !important;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.form_add_check input{
+    display: inline-block !important;
+    position: relative;
+    vertical-align: top;
+    margin: 7px 0;
+}
+
+.form_add_check label{
+    display: inline-block !important;
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: top;
+    font-weight: 300;
+    margin: 0 5px !important;
+    padding: 0 !important;
+}
+
+.phone2app_modal.loading button {
+    max-height: 100%;
+    padding-top: 50px;
+}
+.phone2app_modal.loading button .spinner {
+    opacity: 1;
+    top: 40%;
+}
+.phone2app_modal.ok button {
+    background-color: #8bc34a;
+}
+.phone2app_modal.ko button {
+    background-color: #F44336;
+}
+.phone2app_modal.ok button .spinner {
+    border-radius: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    height: 20px;
+    animation: none;
+    transform: rotateZ(-45deg);
+}
+.phone2app_modal.ko button .spinner {
+    border-radius: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    height: 20px;
+    -webkit-animation: none;
+    -webkit-transform: rotateZ(0deg);
+    border:none;
+    box-shadow: none;
+    font-size: 40px;
+    font-style: normal;
+}
+.phone2app_modal.ko button .spinner:after {
+    content: ':(';
+}
+
+.phone2app_modal button {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+    background: #0096D7 !important;
+    color: #fff;
+    display: block;
+    border: none;
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-height: 60px;
+    border: 0px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 2px 2px;
+    transform: rotateZ(0deg);
+    transition: all 0.1s ease-out;
+    border-bottom-width: 7px;
+}
+
+.phone2app_modal button .spinner {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 4px solid #ffffff;
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    left: 50%;
+    top: 0;
+    opacity: 0;
+    margin-left: -20px;
+    margin-top: -20px;
+    animation: spinner 0.6s infinite linear;
+    transition: top 0.3s 0.3s ease, opacity 0.3s 0.3s ease, border-radius 0.3s ease;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.phone2app_modal:not(.loading) button:hover {
+    box-shadow: 0px 1px 3px #0096D7 !important;
+}
+
+.phone2app_modal:not(.loading) button:focus {
+    border-bottom-width: 4px;
+}
+
+.form-list-end{
+    position: relative;
+    margin: 20px auto !important;
+    width: 2vh !important;
+    display: block !important;
+    font-size: 2vh !important;
+    color: #ddd;
+}
+
+.phone2app-header{
+    border-radius: 2px 2px 5px 5px;
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    margin-top: 5%;
+    max-width: 1000px;
+    width: 90%;
+}
+
+.phone2app-header .details{
+    width: 27.5%;
+}
+
+.phone2app-header div{
+    position: relative;
+    display: inline-block;
+    width: 15%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.phone2app-header .icon{
+    float: right;
+}
+
+.phone2app-header i, .phone2app-header a p{
+    text-align: center;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.phone2app-header p{
+    width: auto;
+    display: inline-block;
+    margin: 5px 0 5px 10px;
+    vertical-align: top;
+}
+
+.phone2app-header i{
+    font-size: 40px;
+}
+
+.phone2app-header .details .phone2app-label{
+    position: relative;
+    margin: 5px 0 5px 10px;
+    font-weight: 600;
+    display: inline-block;
+    cursor: none;
+}
+
+.phone2app-header a{
+    font-style: normal;
+    color:inherit;
+    text-decoration: none;
+}
+
+.phone2app_input{
+    padding: 3px 5px;
+}
+
+#signup{
+    height: 450px !important;
+}
